@@ -1,17 +1,14 @@
-package Entity;
+package dev.danvega.SSOTEST.Entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import java.time.LocalDateTime;
+import java.sql.Timestamp;
 
 @Entity
-@Table(name = "sso_user_test")  // กำหนดชื่อของตารางในฐานข้อมูล
-public class SSOUserTest {
+public class SSOUserTestEntity {
 
     @Id
-    private LocalDateTime requestDate;  // request_date เป็น Primary Key
-
+    private Timestamp requestDate;
     private String ssotype;
     private String systemid;
     private String systemname;
@@ -28,11 +25,11 @@ public class SSOUserTest {
     private String tokenid;
 
     // Getters and Setters
-    public LocalDateTime getRequestDate() {
+    public Timestamp getRequestDate() {
         return requestDate;
     }
 
-    public void setRequestDate(LocalDateTime requestDate) {
+    public void setRequestDate(Timestamp requestDate) {
         this.requestDate = requestDate;
     }
 
